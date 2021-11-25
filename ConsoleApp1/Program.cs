@@ -4,9 +4,35 @@ namespace Programapractica
 {
     class Program
     {
+        static double circulo()
+        {
+            double pi = 3.14;
+            Console.WriteLine("Ingrese radio: ");
+            double vradio = Convert.ToDouble(Console.ReadLine());
+            return  pi * vradio * vradio;
+        }
+
+        static double rectangulo()
+        {
+            Console.WriteLine("Ingrese la base: ");
+            double vbase = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingrese la altura");
+             double valtura = Convert.ToDouble(Console.ReadLine());
+             return  vbase* valtura;
+        }
+
+        static double triangulo()
+        {
+            Console.WriteLine("Ingrese la base: ");
+            double vbase = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingrese la altura: ");
+            double valtura = Convert.ToDouble(Console.ReadLine());
+            return vbase * valtura / 2;
+        }
+        
         static void Main(string[] args)
         {  String placeholder =new String('*',50); 
-            double pi = 3.14, vradio, vbase, valtura,resultado=0;
+            double resultado=0;
             Console.Write($"{placeholder}\nPrograma para Geometria\n{placeholder}\n");
             while (true) 
             {   Console.WriteLine("Que area desea calcular?\n(c) Circulo \n(r)Rectangulo \n(t)Triangulo \n(s)Salir");
@@ -15,23 +41,13 @@ namespace Programapractica
                     break;
                 switch(opcion){
                     case "c":
-                        Console.WriteLine("Ingrese radio: ");
-                      vradio = Convert.ToDouble(Console.ReadLine());
-                      resultado = pi * vradio * vradio;
+                        resultado = circulo();
                       break;
                   case "r":
-                      Console.WriteLine("Ingrese la base: ");
-                      vbase = Convert.ToDouble(Console.ReadLine());
-                      Console.WriteLine("Ingrese la Altura");
-                      valtura = Convert.ToDouble(Console.ReadLine());
-                      resultado = (vbase * valtura);
+                      resultado = rectangulo();
                       break;
                   case "t":
-                      Console.WriteLine("Ingrese la base: ");
-                      vbase = Convert.ToDouble(Console.ReadLine());
-                      Console.WriteLine("Ingrese la altura: ");
-                      valtura = Convert.ToDouble(Console.ReadLine());
-                      resultado = (vbase * valtura) / 2;
+                      resultado = triangulo();
                       break;
                 }
 
