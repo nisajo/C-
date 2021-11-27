@@ -15,8 +15,6 @@ namespace ConsoleApp2
             return area;
         }
         private double area;
-
-       
     }
     
 }

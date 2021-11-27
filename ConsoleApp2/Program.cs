@@ -4,8 +4,6 @@ namespace ConsoleApp2
 {
     class Program
     {
-       
-        
         static void Main(string[] args)
         {  
             String placeholder =new String('*',50); 
